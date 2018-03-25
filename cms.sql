@@ -10,9 +10,9 @@ use 'skccms';
 
 -- --------------------------------------------------------
 --
--- 栏目表 `cms_cat`
+-- 栏目表 `cms_category`
 --
-CREATE TABLE IF NOT EXISTS cms_cat (
+CREATE TABLE IF NOT EXISTS cms_category (
 	cat_id tinyint(4) unsigned not null comment '栏目ID',
 	cat_name varchar(20) not null comment '栏目名称',
 	sort_order tinyint(20) not null comment '栏目排序',
@@ -22,9 +22,9 @@ CREATE TABLE IF NOT EXISTS cms_cat (
 
 -- --------------------------------------------------------
 --
--- 文章表 `cms_content`
+-- 文章表 `cms_article`
 --
-CREATE TABLE IF NOT EXISTS cms_content (
+CREATE TABLE IF NOT EXISTS cms_article (
 	id int(11) unsigned not null comment 'ID', 
 	cat_id tinyint(4) unsigned not null comment '栏目ID',
 	title varchar(50) not null comment '文章标题',
