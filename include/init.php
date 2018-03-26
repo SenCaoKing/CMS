@@ -8,7 +8,7 @@ date_default_timezone_set('Asia/Shanghai');
 /* 取得当前网站所在的根目录 */
 define('ROOT_PATH', str_replace('include/init.php', '', str_replace('\\', '/', __FILE__)));
 /* 引入基本的函数库 */
-// require_once(ROOT_PATH . 'include/functions.php');
+require_once(ROOT_PATH . 'include/functions.php');
 /* 取得当前网站的配置信息 */
 require_once(ROOT_PATH . 'include/config.php');
 /* 初始化数据库类 */

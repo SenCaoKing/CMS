@@ -12,8 +12,68 @@
 </head>
 
 <body>
-<form  id="form1" name="form1" method="post" action="">
-
+<form id="form1" name="form1" method="post" action="?act=<?= $form_act?>">
+	<table width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+			<td width="13%">&nbsp;</td>
+			<td width="87%">&nbsp;</td>
+		</tr>
+		<tr>
+			<td>所属栏目：</td>
+			<!-- <td>
+				<span id="spryselect1">
+					<select name="cat_id" id="cat_id">
+						<option value="">请选择...</option>
+					</select>
+					<span class="selectRequiredMsg">请选择一个项目。</span>
+				</span>
+			</td> -->
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>文章标题：</td>
+			<td>
+				<span id="sprytextfield1">
+					<input type="text" name="title" id="title" value="" />
+					<span class="textfieldRequiredMsg">需要提供一个值。</span>
+				</span>
+			</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td valign="top">文章内容：</td>
+			<td>
+				<span id="sprytextarea1">
+					<textarea name="content" cols="60" rows="12" id="content"></textarea>
+					<span class="textareaRequiredMsg">需要提供一个值。</span>
+				</span>
+			</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>
+				<input type="hidden" name="id" value="" />
+				<input type="submit" value="提交" />
+				&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="reset" value="重置" />
+			</td>
+		</tr>
+	</table>
 </form>
+<script type="text/javascript">
+var spryselect1 = new Spry.Widget.ValidationSelect("spryselect1");
+var sprytextfield1 = new Spry.Widget.ValidationTextField("sprytextfield1");
+var sprytextarea1 = new Spry.Widget.ValidationTextarea("sprytextarea1");
+</script>
 </body>
 </html> 
