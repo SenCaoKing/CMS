@@ -1,7 +1,7 @@
 <?php
 require_once('../include/init.php');													// 引入初始文件
 
-// $categories = $db->get_all("SELECT * FROM {$prefix}category ORDER BY sort_order ASC");  // 提取栏目
+$categories = $db->get_all("SELECT * FROM {$prefix}category ORDER BY sort_order ASC");  // 提取栏目
 
 if($_GET['act'] == 'list') {														    // 显示文章列表
 
@@ -12,7 +12,7 @@ if($_GET['act'] == 'list') {														    // 显示文章列表
 	$page_size = 10;																	// 每页10条记录
 
 	$rows = $db->get_all("SELECT * FROM {$prefix}article AS A LEFT JION {$prefix}category AS B ON A.cat = B.cat_id ORDER BY A.add_time DESC LIMIT ".($page-1)*$page_size.", {$page_size}");	// 得到当前页所包含的数据
-
+	// var_dump($rows);
 	include('article_list.php');														// 引入分页视图模板
 } elseif($_GET['act'] == 'add') {														// 添加
 

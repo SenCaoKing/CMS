@@ -20,14 +20,14 @@
 		</tr>
 		<tr>
 			<td>所属栏目：</td>
-			<!-- <td>
+			<td>
 				<span id="spryselect1">
 					<select name="cat_id" id="cat_id">
 						<option value="">请选择...</option>
 					</select>
 					<span class="selectRequiredMsg">请选择一个项目。</span>
 				</span>
-			</td> -->
+			</td>
 		</tr>
 		<tr>
 			<td>&nbsp;</td>

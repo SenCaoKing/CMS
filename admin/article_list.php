@@ -35,13 +35,18 @@
 				<td width="18%" align="center">添加时间</td>
 				<td width="12%" align="center">操作</td>
 			</tr>
+			<?php foreach($rows as $row):?><!-- 循环记录 -->
 			<tr>
-				<td align="center"><input type="checkbox" name="id[]" value="" /></td>
-				<td align="center"></td>
-				<td align="center"></td>
-				<td align="center"></td>
-				<td align="center">编辑 | 删除</td>
+				<td align="center"><input type="checkbox" name="id[]" value="<?= $row['cat_id']?>" /></td>
+				<td align="center"><?= $row['cat_id']?></td>
+				<td align="center"><?= $row['cat_name']?></td>
+				<td align="center"><?= $row['cat_name']?></td>
+				<td align="center">
+					<a href="?act=edit">编辑</a> | <a href="?act=del">删除</a>
+				</td>
 			</tr>
+			<?php endforeach;?><!-- 循环记录结束 -->
+			
 		</table>
 		<table width="100%" border="0" cellspacing="0" cellpadding="0">
 			<tr>
