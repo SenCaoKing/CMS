@@ -25,5 +25,4 @@ $session = "1440";
 
 define('XH_CHARSET','utf-8');
 
-
 ?>

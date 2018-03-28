@@ -8,6 +8,8 @@
 <link href="SpryAssets/SpryValidationTextField.css" rel="stylesheet" type="text/css" />
 <link href="SpryAssets/SpryValidationTextarea.css" rel="stylesheet" type="text/css" />
 </head>
+
+<body>
 <form id="form1" name="form1" method="post" action="?act=<?= $form_act?>">
 	<table width="100%" border="0" cellpadding="0" cellspacing="0">
 		<tr>
@@ -55,7 +57,6 @@
 var sprytextfield1 = new Spry.Widget.ValidationTextField("sprytextfield1");
 var sprytextfield2 = new Spry.Widget.ValidationTextField("sprytextfield2", "integer");
 </script>
-<body>
 
 </body>
 </html> 

@@ -12,8 +12,8 @@
 		</tr>
 		<tr>
 			<td width="50%">
-				<form id="form1" name="form1" method="POST" action="">文章搜索
-					<input type="text" name="title" value="" />
+				<form id="form1" name="form1" method="POST" action="?act=search">文章搜索：
+					<input type="text" name="title" value="<?= $title?>" />
 					<input type="submit" name="" value="搜索" />
 				</form>
 			</td>
@@ -26,7 +26,7 @@
 		</tr>
 	</table>
 
-	<form id="form2" name="form2" method="post" action="">
+	<form id="form2" name="form2" method="post" action="?act=del">
 		<table width="100%" border="1" cellpadding="3">
 			<tr>
 				<td width="8%" align="center">选择</td>
@@ -37,12 +37,12 @@
 			</tr>
 			<?php foreach($rows as $row):?><!-- 循环记录 -->
 			<tr>
-				<td align="center"><input type="checkbox" name="id[]" value="<?= $row['cat_id']?>" /></td>
-				<td align="center"><?= $row['cat_id']?></td>
+				<td align="center"><input type="checkbox" name="id[]" value="<?= $row['id']?>" /></td>
 				<td align="center"><?= $row['cat_name']?></td>
-				<td align="center"><?= $row['cat_name']?></td>
+				<td align="center"><?= $row['title']?></td>
+				<td align="center"><?= date('Y-m-d H:i:s', $row['add_time'])?></td>
 				<td align="center">
-					<a href="?act=edit">编辑</a> | <a href="?act=del">删除</a>
+					<a href="?act=edit&id=<?= $row['id']?>">编辑</a> | <a href="?act=del&id=<?= $row['id']?>">删除</a>
 				</td>
 			</tr>
 			<?php endforeach;?><!-- 循环记录结束 -->
@@ -51,7 +51,7 @@
 		<table width="100%" border="0" cellspacing="0" cellpadding="0">
 			<tr>
 				<td>&nbsp;</td>
-				<td align="right"></td>
+				<td align="right"><?= pager($page, $page_size, $total_num, $page_url)?></td>
 			</tr>
 			<tr>
 				<td><input type="submit" value="删 除" /></td>

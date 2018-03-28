@@ -17,4 +17,5 @@ $db = new DB($db_dsn, $db_user, $db_pass);
 
 $db->exec('SET NAMES utf8');
 $db_dsn = $db_user = $db_pass = NULL;
+
 ?>

@@ -43,7 +43,7 @@
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
 	<tr>
 		<td>&nbsp;</td>
-		<td align="right"><?= pager($page, $page_size, $total_num, $page_url)?></td>
+		<td align="right"><?= pager($page, $page_size, $total_num, $page_url)?><!---分页函数显示分页 --></td>
 	</tr>
 	<tr>
 		<td><input type="button" name="button" id="button" value="删除" /></td>
