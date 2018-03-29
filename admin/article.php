@@ -46,7 +46,7 @@ if($_GET['act'] == 'list') {														    // 显示文章列表
 	$article = $db->get_one("SELECT * FROM {$prefix}article WHERE id = ?", array($_GET['id']));
 	include('article_form.php');														// 引入文章信息视图模板
 
-} elseif($GET['act'] == 'update') {														// 数据库更新
+} elseif($_GET['act'] == 'update') {														// 数据库更新
 
 	$db->update($prefix.'article', $_POST, array('id'=>$_POST['id']));					// 更新记录
 	sys_msg("更新文章成功！", '?act=list');												// 系统提示更新数据成功，并返回列表页
